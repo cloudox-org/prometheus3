@@ -31,5 +31,5 @@ jobs:
           podman pull ghcr.io/cloudox-org/cloudox-rpm-builder-test-alma:9
           podman pull ghcr.io/cloudox-org/cloudox-rpm-builder-test-alma:10
 
-      - name: Builing RPMS
+      - name: Building RPMS
         run: make all
