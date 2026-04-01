@@ -26,7 +26,7 @@ jobs:
 
       - name: Pull Container Images
         run: |
-          ln -sf /usr/bin/podman /usr/bin/docker
+          sudo ln -sf /usr/bin/podman /usr/bin/docker
           podman pull ghcr.io/cloudox-org/cloudox-rpm-builder-test-alma:8
           podman pull ghcr.io/cloudox-org/cloudox-rpm-builder-test-alma:9
           podman pull ghcr.io/cloudox-org/cloudox-rpm-builder-test-alma:10
