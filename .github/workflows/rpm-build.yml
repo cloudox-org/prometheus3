@@ -1,4 +1,4 @@
-name: Build RPMS EL8, EL9 and EL10
+name: RPM builds for EL8, EL9 and EL10
 
 on:
   pull_request:
