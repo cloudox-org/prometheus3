@@ -1,8 +1,6 @@
-name: Build RPMS
+name: Build RPMS EL8, EL9 and EL10
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
