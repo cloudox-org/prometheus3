@@ -23,7 +23,7 @@ build:
 
 	podman run --rm -v ${PWD}/${OUT_DIR}:/var/tmp/:z \
 		${IMAGE} \
-		/bin/bash -c '/usr/bin/dnf install --verbose -y --setopt=localpkg_gpgcheck=1 /var/tmp/${PACKAGE}*.rpm'
+		/bin/bash -c '/usr/bin/dnf install --verbose -y  /var/tmp/${PACKAGE}*.rpm'
 
 	@echo "[*] Removing sources..."
 	@rm -f *.tar.gz
