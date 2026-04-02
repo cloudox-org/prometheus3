@@ -32,4 +32,4 @@ clean:
 	@echo "[*] Cleaning up build artifacts..."
 	@rm -rf el8 el9 el10
 	@rm -f *.tar.gz
-	eecho "[*] Cleanup complete."
+	@echo "[*] Cleanup complete."
