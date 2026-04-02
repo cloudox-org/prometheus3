@@ -15,7 +15,6 @@ build:
 	podman run --rm -v ${PWD}:/root/rpmbuild/SOURCES:z \
 		-v ${PWD}/${OUT_DIR}:/root/rpmbuild/RPMS/x86_64:z \
 		-v ${PWD}/${OUT_DIR}:/root/rpmbuild/RPMS/noarch:z \
-		-v ${HOME}/.gnupg:/root/.gnupg:z \
 		${IMAGE} \
 		build-spec /root/rpmbuild/SOURCES/${PACKAGE}.spec
 
