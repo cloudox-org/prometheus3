@@ -19,15 +19,10 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Creating mock gpg directory
+      - name: Creating gpg directory
         run: mkdir -p ~/.gnupg
 
-      - name: Pull Container Images
+      - name: Building RPMS
         run: |
           sudo ln -sf /usr/bin/podman /usr/bin/docker
-          podman pull ghcr.io/cloudox-org/cloudox-rpm-builder-test-alma:8
-          podman pull ghcr.io/cloudox-org/cloudox-rpm-builder-test-alma:9
-          podman pull ghcr.io/cloudox-org/cloudox-rpm-builder-test-alma:10
-
-      - name: Building RPMS
-        run: make all
+          make all
