@@ -19,10 +19,18 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Creating gpg directory
-        run: mkdir -p ~/.gnupg
-
       - name: Building RPMS
         run: |
           sudo ln -sf /usr/bin/podman /usr/bin/docker
           make all
+
+      - name: Deploying RPMS
+        if: github.ref == 'refs/heads/main'
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.REPO_SERVER }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          source: "el10/*.rpm,el9/*.rpm,el8/*.rpm"
+          target: ~/
