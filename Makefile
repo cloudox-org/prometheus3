@@ -1,9 +1,7 @@
 .PHONY: all build clean
 
-VERSION ?= 10
 PACKAGE = prometheus3
-REGISTRY = ghcr.io/cloudox-org/cloudox-rpm-builder-alma
-IMAGE = ${REGISTRY}:${VERSION}
+IMAGE = ghcr.io/cloudox-org/cloudox-rpm-builder-alma:${VERSION}
 OUT_DIR = el${VERSION}
 
 all:
