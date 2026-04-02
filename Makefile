@@ -2,7 +2,7 @@
 
 VERSION ?= 10
 PACKAGE = prometheus3
-REGISTRY = ghcr.io/cloudox-org/cloudox-rpm-builder-test-alma
+REGISTRY = ghcr.io/cloudox-org/cloudox-rpm-builder-alma
 IMAGE = ${REGISTRY}:${VERSION}
 OUT_DIR = el${VERSION}
 
@@ -32,4 +32,4 @@ clean:
 	@echo "[*] Cleaning up build artifacts..."
 	@rm -rf el8 el9 el10
 	@rm -f *.tar.gz
-	@echo "[*] Cleanup complete."
+	eecho "[*] Cleanup complete."

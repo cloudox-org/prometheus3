@@ -19,7 +19,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Creating mock gpg directory
+      - name: Creating gpg directory
         run: mkdir -p ~/.gnupg
 
       - name: Pull Container Images
