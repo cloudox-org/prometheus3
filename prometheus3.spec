@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name: prometheus3
-Version: 3.5.1
+Version: 3.5.3
 Release: 1%{?dist}
 Summary: The Prometheus monitoring system and time series database.
 License: ASL 2.0
@@ -59,6 +59,9 @@ exit 0
 %dir %attr(755, prometheus, prometheus)%{_sharedstatedir}/prometheus
 
 %changelog
+* Sat Jun 13 2026 Ivan Garcia <igarcia@cloudox.org> - 3.5.3
+- Update to Prometheus to 3.5.3
+- This release fixes mutiple security issues
 * Wed Feb 18 2026 Ivan Garcia <igarcia@cloudox.org> - 3.5.1-1
 - Update to Prometheus 3.5.1 (LTS Version)
 - Initial packaging for the 3.5 LTS release stream
