@@ -59,7 +59,7 @@ exit 0
 %dir %attr(755, prometheus, prometheus)%{_sharedstatedir}/prometheus
 
 %changelog
-* Thu Jan 23 2026 Ivan Garcia <igarcia@cloudox.org> - 3.13.0
+* Thu Jul 23 2026 Ivan Garcia <igarcia@cloudox.org> - 3.13.0
 - Update to Prometheus to 3.13.0
 - This is a Long Term Support LTS release
 * Sat Jun 13 2026 Ivan Garcia <igarcia@cloudox.org> - 3.5.3
